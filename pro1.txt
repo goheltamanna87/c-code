@@ -1,0 +1,29 @@
+declare
+  sub1 number:=&sub1;
+  sub2 number:=&sub2;
+  sub3 number:=&sub3;
+  sub4 number:=&sub4;
+ total number;
+  avge number(10,2);
+begin
+dbms_output.put_line('subject1 mark of:'||sub1);
+dbms_output.put_line('subject2 mark of:'||sub2);
+dbms_output.put_line('subject3 mark of:'||sub3);
+dbms_output.put_line('subject4 mark of:'||sub4);
+total:=sub1+sub2+sub3+sub4;
+dbms_output.put_line('total mark of subject:'||total);
+avge:=total/4;
+dbms_output.put_line('average is:'||avge);
+if(avge>90) then
+dbms_output.put_line('grade A');
+elsif(avge>90 and avge<80) then
+dbms_output.put_line('grade B');
+elsif(avge>80 and avge<70) then
+dbms_output.put_line('grade C');
+elsif(avge>70 and avge<60) then
+dbms_output.put_line('grade D');
+elsif(avge<60) then
+dbms_output.put_line('fall');
+end if;
+end;
+/
